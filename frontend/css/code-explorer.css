@@ -1,0 +1,300 @@
+/* ==========================================================================
+   C++ Code Explorer Panel Styles
+   Dark Navy IDE Editor Theme
+   ========================================================================== */
+
+.code-explorer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-code-panel);
+  color: #e2e8f0;
+}
+
+/* Toolbar & Search Bar */
+.code-toolbar {
+  padding: 10px 14px;
+  background-color: #070e1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.code-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.code-search-input {
+  width: 100%;
+  padding: 7px 32px 7px 32px;
+  background-color: #0f1d38;
+  border: 1px solid #1e3a66;
+  border-radius: var(--radius-sm);
+  color: #f8fafc;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  transition: all var(--transition-fast);
+}
+
+.code-search-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+.search-icon-svg {
+  position: absolute;
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  fill: #64748b;
+  pointer-events: none;
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  border-radius: var(--radius-xs);
+  display: none;
+}
+.search-clear-btn.visible {
+  display: block;
+}
+
+.code-toolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+.code-stats-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.code-quick-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-link {
+  color: #38bdf8;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-family: var(--font-sans);
+  padding: 2px 4px;
+}
+.action-link:hover {
+  text-decoration: underline;
+  color: #7dd3fc;
+}
+
+/* ==========================================================================
+   Code Sections & Collapsible Architecture
+   ========================================================================== */
+.code-editor-viewport {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  padding-bottom: 30px;
+  user-select: text;
+}
+
+.code-section-group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.code-section-group.highlighted-section {
+  border-left: 3px solid #38bdf8;
+  background-color: rgba(56, 189, 248, 0.03);
+}
+
+.code-section-header {
+  padding: 8px 12px;
+  background-color: #0b172e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color var(--transition-fast);
+}
+
+.code-section-header:hover {
+  background-color: #102142;
+}
+
+.section-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-chevron {
+  width: 14px;
+  height: 14px;
+  fill: #64748b;
+  transition: transform var(--transition-fast);
+}
+
+.code-section-group.collapsed .section-chevron {
+  transform: rotate(-90deg);
+}
+
+.section-title {
+  font-weight: 600;
+  color: #e2e8f0;
+  font-size: 0.8rem;
+}
+
+.section-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.section-oop-tag {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  background: rgba(124, 58, 237, 0.25);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.section-lines-count {
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   Code Lines & Line Numbering
+   ========================================================================== */
+.code-lines-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-section-group.collapsed .code-lines-wrapper {
+  display: none;
+}
+
+.code-line {
+  display: flex;
+  align-items: stretch;
+  min-height: 22px;
+  cursor: pointer;
+  transition: background-color 100ms ease;
+  outline: none;
+  border-left: 3px solid transparent;
+}
+
+.code-line:hover {
+  background-color: var(--bg-code-hover);
+}
+
+.code-line:focus-visible {
+  border-left-color: #60a5fa;
+  background-color: rgba(96, 165, 250, 0.12);
+}
+
+.code-line.active {
+  background-color: var(--bg-code-active) !important;
+  border-left: 3px solid #38bdf8 !important;
+}
+
+.code-line.active .line-num {
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.code-line.match-active {
+  background-color: rgba(245, 158, 11, 0.15);
+}
+
+.line-num {
+  width: 44px;
+  flex-shrink: 0;
+  padding: 0 10px 0 8px;
+  text-align: right;
+  color: var(--syntax-line-num);
+  user-select: none;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.line-content {
+  flex: 1;
+  padding: 0 12px;
+  white-space: pre;
+  display: flex;
+  align-items: center;
+  overflow-x: visible;
+}
+
+/* ==========================================================================
+   Syntax Highlighting Colors
+   ========================================================================== */
+.kw {
+  color: var(--syntax-keyword);
+  font-weight: 600;
+}
+
+.tp {
+  color: var(--syntax-type);
+}
+
+.fn {
+  color: var(--syntax-function);
+}
+
+.str {
+  color: var(--syntax-string);
+}
+
+.num {
+  color: var(--syntax-number);
+}
+
+.cmt {
+  color: var(--syntax-comment);
+  font-style: italic;
+}
+
+.op {
+  color: var(--syntax-operator);
+}
+
+.id {
+  color: var(--syntax-identifier);
+}
+
+.search-highlight {
+  background-color: rgba(245, 158, 11, 0.35);
+  color: #fef08a;
+  border-radius: 2px;
+  padding: 0 2px;
+}

@@ -1,0 +1,280 @@
+/* ==========================================================================
+   Code Explanation Panel Styles
+   Stacked Light Cards with Rich OOP Annotations
+   ========================================================================== */
+
+.explanation-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--slate-50);
+}
+
+[data-theme="dark"] .explanation-container {
+  background-color: #0c1424;
+}
+
+.explanation-header-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.explanation-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ==========================================================================
+   Stacked Explanation Cards
+   ========================================================================== */
+.exp-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.exp-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.exp-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.exp-card-title {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exp-card-title svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--text-muted);
+}
+
+.exp-card-content {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+
+/* Specific Card Treatments */
+
+/* 1. Selected Code Card */
+.exp-code-card {
+  border-left: 4px solid var(--blue-600);
+}
+
+.code-snippet-box {
+  background-color: #091326;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #e2e8f0;
+  overflow-x: auto;
+  margin-top: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  line-height: 1.45;
+}
+
+.code-snippet-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.jump-sim-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: var(--blue-50);
+  color: var(--blue-600);
+  border: 1px solid var(--blue-100);
+  border-radius: var(--radius-xs);
+  font-size: 0.73rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.jump-sim-btn:hover {
+  background-color: var(--blue-100);
+  color: var(--blue-700);
+}
+
+[data-theme="dark"] .jump-sim-btn {
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+/* 4. OOP Concept Card */
+.exp-concept-card {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.04), rgba(37, 99, 235, 0.04));
+  border-left: 4px solid var(--purple-600);
+}
+
+.concept-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.concept-pill {
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--purple-100);
+  color: var(--purple-700);
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+[data-theme="dark"] .concept-pill {
+  background: rgba(124, 58, 237, 0.25);
+  color: #c4b5fd;
+}
+
+/* 5. Where It Is Used Card */
+.exp-used-card {
+  border-left: 4px solid var(--teal-600);
+}
+
+.usage-location-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  background-color: var(--teal-50);
+  color: var(--teal-600);
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-bottom: 6px;
+}
+
+[data-theme="dark"] .usage-location-pill {
+  background-color: rgba(13, 148, 136, 0.2);
+  color: #2dd4bf;
+}
+
+/* 6. Practical Example & Terminal Preview Card */
+.exp-example-card {
+  border-left: 4px solid #f59e0b;
+}
+
+.terminal-preview-box {
+  background-color: #050a14;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: #a7f3d0;
+  margin-top: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: pre-wrap;
+  position: relative;
+}
+
+.terminal-badge {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.65rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+/* Progressive Disclosure: Deep Dive Accordion */
+.deep-dive-accordion {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-card);
+  overflow: hidden;
+}
+
+.deep-dive-trigger {
+  width: 100%;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-card-subtle);
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-main);
+  cursor: pointer;
+  text-align: left;
+}
+
+.deep-dive-trigger:hover {
+  background-color: var(--slate-100);
+}
+
+.deep-dive-content {
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-subtle);
+  display: none;
+}
+
+.deep-dive-accordion.expanded .deep-dive-content {
+  display: block;
+}
+
+.deep-dive-chevron {
+  width: 14px;
+  height: 14px;
+  fill: var(--text-muted);
+  transition: transform var(--transition-fast);
+}
+
+.deep-dive-accordion.expanded .deep-dive-chevron {
+  transform: rotate(180deg);
+}
+
+.viva-tip-box {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background-color: #fffbeb;
+  border-left: 3px solid #f59e0b;
+  border-radius: var(--radius-xs);
+  font-size: 0.75rem;
+  color: #92400e;
+}
+
+[data-theme="dark"] .viva-tip-box {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #fde68a;
+}

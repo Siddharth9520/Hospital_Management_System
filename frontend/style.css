@@ -1,0 +1,10 @@
+/* ==========================================================================
+   CarePulse Consolidated Stylesheet
+   Combines Variables, Main Layout, Code Explorer, Explanations, & Simulation
+   ========================================================================== */
+
+@import url("css/variables.css");
+@import url("css/main.css");
+@import url("css/code-explorer.css");
+@import url("css/explanation.css");
+@import url("css/simulation.css");

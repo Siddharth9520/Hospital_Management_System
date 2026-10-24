@@ -1,0 +1,120 @@
+/* ==========================================================================
+   CarePulse Design Tokens & Variables
+   Healthcare SaaS + C++ Interactive Learning Environment
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Healthcare Theme */
+  --navy-950: #070e1b;
+  --navy-900: #0a192f;
+  --navy-850: #0d1f3b;
+  --navy-800: #132749;
+  --navy-700: #1b3560;
+  
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-500: #3b82f6;
+  --blue-100: #dbeafe;
+  --blue-50: #eff6ff;
+
+  --teal-600: #0d9488;
+  --teal-500: #14b8a6;
+  --teal-100: #ccfbf1;
+  --teal-50: #f0fdfa;
+
+  --amber-600: #d97706;
+  --amber-500: #f59e0b;
+  --amber-100: #fef3c7;
+  --amber-50: #fffbeb;
+
+  --red-600: #dc2626;
+  --red-500: #ef4444;
+  --red-100: #fee2e2;
+  --red-50: #fef2f2;
+
+  --purple-700: #6d28d9;
+  --purple-600: #7c3aed;
+  --purple-500: #8b5cf6;
+  --purple-100: #ede9fe;
+  --purple-50: #f5f3ff;
+
+  /* Neutral Spectrum */
+  --slate-900: #0f172a;
+  --slate-800: #1e293b;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-300: #cbd5e1;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --slate-50: #f8fafc;
+  --white: #ffffff;
+
+  /* Semantic UI Tokens */
+  --bg-app: var(--slate-50);
+  --bg-card: var(--white);
+  --bg-card-subtle: #f8fafc;
+  --bg-header: var(--navy-900);
+  --bg-code-panel: #0b1325;
+  --bg-code-active: #172554;
+  --bg-code-hover: #101c36;
+
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --border-dark: #1e293b;
+
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-inverse: #f8fafc;
+
+  /* C++ Code Syntax Highlighting */
+  --syntax-keyword: #f472b6;
+  --syntax-type: #38bdf8;
+  --syntax-string: #4ade80;
+  --syntax-number: #fb923c;
+  --syntax-comment: #64748b;
+  --syntax-function: #a78bfa;
+  --syntax-identifier: #e2e8f0;
+  --syntax-operator: #94a3b8;
+  --syntax-line-num: #475569;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-glow: 0 0 15px rgba(37, 99, 235, 0.25);
+
+  /* Borders & Radius */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --bg-app: #080d1a;
+  --bg-card: #0f172a;
+  --bg-card-subtle: #131d33;
+  --bg-header: #050a14;
+  --border-subtle: #1e293b;
+  --border-strong: #334155;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+}

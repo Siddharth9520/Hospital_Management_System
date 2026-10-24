@@ -1,0 +1,73 @@
+# ==============================================================================
+# CarePulse — Hospital Management System & C++ Learning Simulator
+# .gitignore
+# ==============================================================================
+
+# Compiled C++ Executables and Libraries
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Build and Output Directories
+build/
+dist/
+bin/
+out/
+target/
+
+# Local Dev & Legacy Scratch Scripts (preserved locally, excluded from repo)
+carepulse_system.cpp
+carepulse_system.exe
+server.exe
+scratch_*.py
+test_*.py
+test_winthread.exe
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.pytest_cache/
+
+# IDE and Editor Metadata
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Operating System Metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# Logs, Dumps, and Temporary Artifacts
+*.log
+*.tmp
+*.bak
+*.orig
+*.dump
+
+# Local Backup Directories
+*_backup*/
+*backup/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
