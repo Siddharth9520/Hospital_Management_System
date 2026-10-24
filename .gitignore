@@ -22,13 +22,13 @@ bin/
 out/
 target/
 
-# Local Dev & Legacy Scratch Scripts (preserved locally, excluded from repo)
-carepulse_system.cpp
+# Local Dev & Binaries
 carepulse_system.exe
 server.exe
-scratch_*.py
-test_*.py
 test_winthread.exe
+scratch_*.py
+test_one.py
+test_api.py
 
 # Python Cache & Bytecode
 __pycache__/

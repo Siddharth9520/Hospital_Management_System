@@ -75,6 +75,9 @@ The system implements the following academic fee rules calculated authoritativel
 CAREPULSE/
 ├── .gitignore                     # Git exclusion rules for binaries, caches, and logs
 ├── README.md                      # Comprehensive project documentation
+├── vercel.json                    # Vercel deployment routing configuration
+├── carepulse_system.cpp           # Standalone C++ CLI simulator (all 5 OOP concepts)
+├── test_backend_suite.py          # Automated C++ REST API test suite (31 tests)
 ├── backend/
 │   └── main.cpp                   # Multi-threaded C++ HTTP REST backend & domain classes
 └── frontend/
@@ -101,21 +104,24 @@ CAREPULSE/
 
 ## 7. Prerequisites
 
-- **Operating System:** Windows 10 or 11 (64-bit recommended).
-- **C++ Compiler:** MinGW GCC with C++14 support (`g++`).
+- **Operating System:** Windows 10 or 11 (64-bit recommended), Linux, or macOS.
+- **C++ Compiler:** MinGW GCC with C++14 support (`g++`) or Clang.
 - **Web Browser:** Modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox).
+- **Python (Optional for Automated Testing):** Python 3.8+.
 
 ---
 
 ## 8. Build & Run Instructions
 
-### Step 1: Compile the C++ Backend Server
+### Option A: Interactive Full-Stack Web Application
+
+#### Step 1: Compile the C++ Backend Server
 Open PowerShell or Command Prompt in the repository root directory:
 ```powershell
 g++ -O2 -std=c++14 backend/main.cpp -o server.exe -lws2_32
 ```
 
-### Step 2: Launch the Backend Server
+#### Step 2: Launch the Backend Server
 ```powershell
 .\server.exe
 ```
@@ -127,14 +133,49 @@ You will see the startup banner:
 ==========================================================
 ```
 
-### Step 3: Launch the Frontend
+#### Step 3: Launch the Frontend
 The frontend can be loaded in either of two ways:
 1. **Via Built-in C++ Web Server (Recommended):** Open your browser and navigate to:
    ```
    http://localhost:5000/
    ```
-2. **Via Local Static Server or File:** Open `frontend/index.html` directly or host it on port 8080.
+2. **Via Local Static Server or File:** Open `frontend/index.html` directly in any web browser.
    - Verify the top-right header badge indicates **🟢 C++ Server Online**.
+
+---
+
+### Option B: Standalone C++ Terminal Simulator
+
+To run the pure C++ console application without a web server or browser:
+```powershell
+g++ -O2 -std=c++14 carepulse_system.cpp -o carepulse_system.exe
+.\carepulse_system.exe
+```
+
+---
+
+### Option C: Run Automated Test Suite
+
+To verify all 31 REST API endpoints, polymorphic billing rules, and C++ OOP constraints:
+```powershell
+python test_backend_suite.py
+```
+Expected output:
+```
+==========================================
+Test Summary: 31/31 Passed (100.0%)
+==========================================
+ALL BACKEND TESTS PASSED PERFECTLY!
+```
+
+---
+
+### Option D: Deploy to Vercel
+
+The repository includes a ready-to-use `vercel.json` file. To deploy:
+1. Import this repository (`Siddharth9520/Hospital_Management_System`) on [Vercel](https://vercel.com).
+2. Leave build settings as default; Vercel automatically routes `/` to `/frontend/index.html`.
+3. The interactive frontend simulation runs seamlessly with full client-side state fallback.
 
 ---
 
